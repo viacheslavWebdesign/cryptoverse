@@ -1,0 +1,13 @@
+@import 'var';
+
+.bg-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.bg-contain{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

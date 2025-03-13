@@ -1,0 +1,19 @@
+{
+  "name": "cstm",
+  "version": "1.0.0",
+  "description": "cstm frontend template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "test": "test"
+  },
+  "author": "unknwn",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.85.1"
+  }
+}

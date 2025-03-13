@@ -1,0 +1,148 @@
+.footer {
+  border-top: solid 1px $borderSecondary;
+  padding: 64px 0 40px;
+  &__col {
+    &:nth-of-type(1) {
+      display: flex;
+    }
+  }
+  &__logo {
+    display: block;
+    height: 36px;
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__menu {
+    margin: 64px 0;
+    ul {
+      list-style: none;
+    }
+    li {
+      line-height: 120%;
+      color: $textSecondary;
+      font-size: 20px;
+      &:not(:last-of-type) {
+        margin-bottom: 32px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &__soc {
+    display: flex;
+    gap: 12px;
+    a {
+      height: 36px;
+      width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: solid 1px $borderPrimary;
+    }
+    img {
+      width: 16px;
+      height: auto;
+      display: block;
+    }
+  }
+  &__bottom {
+    margin-top: 64px;
+    line-height: 133.33333333333%;
+    font-size: 12px;
+    text-align: center;
+    color: $textTertiary;
+  }
+  &__links {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 32px 0;
+    &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__col {
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        width: 25%;
+      }
+    }
+    &__menu {
+      margin: 0;
+      ul {
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+          margin-right: 40px;
+        }
+      }
+      a {
+        position: relative;
+        transition: opacity 0.3s ease;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          width: 100%;
+          height: 2px;
+          background: $bgAccent;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+        &:hover {
+          opacity: 0.5;
+          &:after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+    &__soc {
+      justify-content: flex-end;
+      a {
+        transition: all 0.3s ease;
+        &:hover {
+          background: rgba(255, 215, 34, 0.2);
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__links {
+      margin-top: 0;
+      gap: 24px;
+      a {
+        transition: color 0.3s ease;
+        &:hover {
+          color: $textAccent;
+        }
+      }
+    }
+  }
+}
