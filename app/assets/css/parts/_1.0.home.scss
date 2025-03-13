@@ -56,6 +56,34 @@
     transform: translateY(-40%);
     max-width: 400px;
     opacity: 0;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 20%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: skewX(-30deg);
+      animation: shine 5s linear infinite;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 150%;
+  }
+  40% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
   }
 }
 
